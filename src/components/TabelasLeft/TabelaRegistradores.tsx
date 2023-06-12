@@ -27,11 +27,11 @@ const TabelaRegistradores: React.FC = () => {
               <Inferior>
                 {registrador.valor
                   ? (ArrayDeInstrucoes.value.find(
-                      (i) => i.input1 == registrador.valor
+                      (i) => i.input1 === registrador.valor
                     )?.input2 ?? "") +
                     " + " +
                     (ArrayDeInstrucoes.value.find(
-                      (i) => i.input1 == registrador.valor
+                      (i) => i.input1 === registrador.valor
                     )?.input3 ?? "")
                   : ""}
               </Inferior>

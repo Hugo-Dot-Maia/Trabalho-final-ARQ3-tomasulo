@@ -5,7 +5,7 @@ import { IntrucaoContext } from "../../App";
 const InputInstrucoes: React.FC = () => {
   const {
     quantidadeInstrucoes,
-    setQuantidadeInstrucoes: setQuantidadeInstrucoes,
+    setQuantidadeInstrucoes,
   } = useContext(IntrucaoContext);
 
   return (
@@ -42,58 +42,44 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   text-align: center;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 42px;
+  margin-right: 22px;
 
   .myButtonLeft {
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
-    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background:  #dfdfdf;
     background-color: #ededed;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border: 1px solid #dcdcdc;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 0;
     display: inline-block;
     cursor: pointer;
     color: #777777;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ffffff;
-  }
-  .myButtonLeft:hover {
-    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-    background-color: #dfdfdf;
   }
   .myButtonLeft:active {
-    position: relative;
-    top: 1px;
+    background: #a1a1aa;
   }
   .myButtonRight {
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
-    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background:  #dfdfdf;
     background-color: #ededed;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border: 1px solid #dcdcdc;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 0;
     display: inline-block;
     cursor: pointer;
     color: #777777;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ffffff;
-  }
-  .myButtonRight:hover {
-    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-    background-color: #dfdfdf;
   }
   .myButtonRight:active {
-    position: relative;
-    top: 1px;
+    background: #a1a1aa;
   }
 `;
 

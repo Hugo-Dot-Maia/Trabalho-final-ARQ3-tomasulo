@@ -8,8 +8,8 @@ import styled from "styled-components";
 import { useArray, UseArrayActions } from "./hooks/useArray";
 import { TipoInstrucao } from "./Enums/TipoInstrucao";
 import { TipoRegistrador } from "./Enums/TipoRegistrador";
-import TelaDireita from "./screen/TelaDireita/TelaDireita";
 import TelaEsquerda from "./screen/TelaEsquerda/TelaEsquerda";
+import TelaDireita from "./screen/TelaDireita/TelaDireita";
 import BotoesConfimarResetar from "./components/Inputs-Botoes/BotoesConfimarResetar";
 import InputInstrucoes from "./components/Inputs-Botoes/InputInstrucoes";
 import AvancarInstrucoes from "./components/Inputs-Botoes/AvancarInstrucoes";
@@ -134,10 +134,9 @@ function App() {
           <Titulo>Simulador de Tomasulo</Titulo>
         </TituloWrapper>
         <ParteTopo>
-          <BotoesConfimarResetar />
-          <Linha />
           <InputInstrucoes />
           <Linha />
+          <BotoesConfimarResetar />
           <AvancarInstrucoes />
         </ParteTopo>
         <ParteBaixo>
@@ -160,6 +159,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   flex: 1;
   height: 99vh;
+  margin-bottom: 30px;
 `;
 
 const TituloWrapper = styled.div`
@@ -187,7 +187,7 @@ const ParteBaixo = styled.div`
 `;
 
 const ParteDireita = styled.div`
-  width: 32%;
+  width: 68%;
   height: 100%;
   background-color: #cccccc;
   border-top: 3px solid #777777;
@@ -196,7 +196,7 @@ const ParteDireita = styled.div`
 `;
 
 const ParteEsquerda = styled.div`
-  width: 68%;
+  width: 32%;
   height: 100%;
   background-color: #d3d3d3;
   border: 3px solid #777777;

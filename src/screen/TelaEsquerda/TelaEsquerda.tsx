@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import TabelaEstacaoReserva from "../../components/TabelasLeft/TabelaEstacaoReserva";
-import TabelaRegistradores from "../../components/TabelasLeft/TabelaRegistradores";
-import TabelaReordenamento from "../../components/TabelasLeft/TabelaReordenamento";
+import InstrucoesTotais from "../../components/TabelasRight/InstrucoesTotais";
 
 const TelaEsquerda: React.FC = () => {
   return (
     <Wrapper>
-      <TabelaRegistradores />
-      <WrapperInferior>
-        <TabelaEstacaoReserva />
-        <TabelaReordenamento />
-      </WrapperInferior>
+      <ParteTopo>
+        <Borda>
+          <InstrucoesTotais />
+        </Borda>
+      </ParteTopo>
     </Wrapper>
   );
 };
@@ -20,14 +18,26 @@ export default TelaEsquerda;
 
 const Wrapper = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: 100%;
 `;
 
-const WrapperInferior = styled.div`
+const ParteTopo = styled.div`
   display: flex;
-  flex: 1;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+`;
+
+const Borda = styled.div`
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  justify-content: "center";
+  align-content: "center";
+  align-items: "center";
+  border-style: double;
+  border-width: 3px;
+  border-color: #777777;
+  border-radius: 8px;
 `;

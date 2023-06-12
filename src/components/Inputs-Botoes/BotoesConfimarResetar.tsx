@@ -10,7 +10,7 @@ const BotoesConfimarResetar: React.FC = () => {
     ArrayDeCiclodeInstrucao: arrCicloPorInstrucao,
     ArrayTipoRegistrador: arrTipoRegistrador,
     ArrayDeRegistrador: arrRegistrador,
-    setQuantidadeInstrucoes: setQuantidadeInstrucoes,
+    setQuantidadeInstrucoes,
     ArrayDeEstacaoReserva: arrEstacaoReserva,
     setConfirmado,
     setCicloAtual,
@@ -119,7 +119,7 @@ const BotoesConfimarResetar: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <div>
+        <WrapperButton>
           <button
             className="myButton"
             style={{ marginRight: "15px" }}
@@ -127,7 +127,7 @@ const BotoesConfimarResetar: React.FC = () => {
           >
             Confirmar
           </button>
-        </div>
+        </WrapperButton>
         <div>
           <button className="myButton" onClick={() => onCliqueResetar()}>
             Resetar
@@ -146,11 +146,10 @@ const Wrapper = styled.div`
   margin-left: 20px;
 
   .myButton {
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
-    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background:  #dfdfdf;
     background-color: #ededed;
-    border-radius: 6px;
-    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    border: 0;
     display: inline-block;
     cursor: pointer;
     color: #777777;
@@ -159,15 +158,9 @@ const Wrapper = styled.div`
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ffffff;
-  }
-  .myButton:hover {
-    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-    background-color: #dfdfdf;
   }
   .myButton:active {
-    position: relative;
-    top: 1px;
+    background: #a1a1aa;
   }
 `;
 
@@ -175,4 +168,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-right: 15px;
+`;
+
+const WrapperButton = styled.div`
+  margin-right: 10px;
 `;
